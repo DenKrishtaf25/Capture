@@ -10,7 +10,7 @@ import ContactUs from './pages/ContactUs';
 import Nav from './components/Nav';
 import MovieDetail from './pages/MovieDetail'
 //Router
-import { Switch, Route, Router } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
