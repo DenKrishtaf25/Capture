@@ -7,8 +7,8 @@ import theracer from '../img/theracer-small.png';
 import goodtimes from '../img/goodtimes-small.png';
 
 //Animations
-import { pageAnimation } from "../pages/animation";
 import { motion } from 'framer-motion';
+import { pageAnimation } from "../animation";
 
 const OurWork = () => {
     return (
@@ -16,6 +16,7 @@ const OurWork = () => {
             variants={pageAnimation}
             initial="hidden"
             animate="show"
+            exit="exit"
         >
             <Movie>
                 <h2>The Athlete</h2>
