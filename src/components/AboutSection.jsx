@@ -5,30 +5,14 @@ import { About, Description, Image, Hide } from "../style.js";
 
 //Framer Motion
 import { motion } from 'framer-motion';
+import { titleAnim, fade, photoAnim } from "../animation";
 
-const titleAnim = {
-    hidden: { opacity: 0, x: 100 },
-    show: {
-        opacity: 1,
-        x: 0, 
-        transition: { duration: .75, ease: "easeOut"},
-    }
-};
-const container = {
-    hidden: { x: 100 },
-    show: { x: 0, transition: { duration: .75, ease: "easeOut", staggerChildren: .3 }},
-}
 
 const AboutSection = () => {
     return (
         <About>
             <Description>
-                <motion.div 
-                    className="title"
-                    variants={container}
-                    initial="hidden"
-                    animate="show"
-                    >
+                <div className="title">
                     <Hide>
                         <motion.h2 variants={titleAnim}>
                             We work to make
@@ -44,15 +28,15 @@ const AboutSection = () => {
                             come true.
                     </motion.h2>
                     </Hide>
-                </motion.div>
-                <p>
+                </div>
+                <motion.p variants={fade}>
                     Contact us for any photograohy or videography ideas that you have. We have
                     professionals with amazing skills.
-                </p>
-                <button>Contact Us</button>
+                </motion.p>
+                <motion.button variants={fade}>Contact Us</motion.button>
             </Description>
             <Image>
-                <img src={home1} alt="guy with a camera" />
+                <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />
             </Image>
         </About>
     )
