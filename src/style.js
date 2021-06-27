@@ -6,16 +6,18 @@ export const About = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 5rem 10rem;
-    color: white; 
+    color: white;
 `;
 export const Description = styled.div`
     flex: 1;
     padding-right: 5rem;
+    z-index: 2;
     h2{
         font-weight: lighter;
     }
 `;
 export const Image = styled.div`
+    z-index: 2;
     flex: 1;
     overflow: hidden;
     img{
